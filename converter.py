@@ -104,7 +104,8 @@ def convert_ppt_to_pdf_batch(input_folder, delete_source=False, recursive=False,
                         try: 
                             with ppt_com_lock:
                                 deck.Close()
-                        except: pass
+                        except Exception: 
+                            pass # nosec B110
                         
                     if attempt < max_retries - 1:
                         time.sleep(2) # Give PowerPoint a moment to unblock
@@ -124,8 +125,8 @@ def convert_ppt_to_pdf_batch(input_folder, delete_source=False, recursive=False,
         try:
             with ppt_com_lock:
                 powerpoint.Quit()
-        except:
-            pass
+        except Exception:
+            pass # nosec B110
         comtypes.CoUninitialize()
 
     # Split files into chunks
