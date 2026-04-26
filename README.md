@@ -9,14 +9,22 @@ A multithreaded tool to batch convert PowerPoint files (`.ppt`, `.pptx`) to PDF 
 - **Graphical Interface**: Features a clean UI with real-time logging and a visual progress bar.
 - **CLI Support**: Fully automatable via the command line.
 
-## Prerequisites
+## Download
+
+You can download the pre-compiled, standalone executable without needing to install Python.
+[Download converter.exe from Releases](https://github.com/ishraklancer/ppt-to-pdf-converter/releases/latest)
+
+## Prerequisites (For running from source)
 - Windows OS
 - Microsoft PowerPoint must be installed on your machine.
-- Python 3 installed.
+- Python 3 installed (if not using the `.exe` version).
 
 ## How to use
 
-### The Easy Way (GUI)
+### The Easiest Way (Executable)
+Simply download `converter.exe` from the Releases page and double-click it.
+
+### Running from Source (GUI)
 Double-click `run.bat`. It will automatically install the required Python packages and launch the graphical interface.
 1. Browse and select your input folder.
 2. Check **Include nested folders** if you want to scan subdirectories.
